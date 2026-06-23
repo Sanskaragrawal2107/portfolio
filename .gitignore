@@ -1,0 +1,29 @@
+# Python virtual environment
+.venv/
+__pycache__/
+*.pyc
+
+# Node dependencies
+node_modules/
+
+# Next.js build and cache
+.next/
+out/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db

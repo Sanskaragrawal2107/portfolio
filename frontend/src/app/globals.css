@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #f0f0f0;
+}
+
+@theme {
+  --color-bg-dark: #0a0a0a;
+  --color-surface: #111111;
+  --color-border-dark: #1f1f1f;
+  --color-primary: #00ff88;
+  --color-secondary: #6366f1;
+  --color-text-primary: #f0f0f0;
+  --color-text-muted: #666666;
+
+  /* Font bindings */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui;
+  --font-heading: var(--font-space-grotesk), ui-sans-serif, system-ui;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas;
+}
+
+body {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Custom terminal block cursor blinking animation */
+@keyframes terminal-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.terminal-cursor {
+  animation: terminal-blink 1s step-end infinite;
+}
+
+/* ---- Loading dot (OpeningScene Suspense fallback) ---- */
+@keyframes loading-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.6); opacity: 0.4; }
+}
+
+.loading-pulse-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #00ff88;
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.8);
+  animation: loading-pulse 1s ease-in-out infinite;
+}
+
+/* ---- Mobile terminal last-line pulse ---- */
+@keyframes mobilePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ---- Opening Scene Animations ---- */
+
+/* Holographic ring rotation */
+@keyframes holo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Subtle float for hero photo */
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Particle float upward */
+@keyframes particle-rise {
+  0% { transform: translateY(0) scale(1); opacity: 0; }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+}
+
+/* Scroll indicator bounce */
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(10px); opacity: 1; }
+}
+
+/* Subtle glitch for title text */
+@keyframes glitch-skew {
+  0% { transform: skew(0deg); }
+  20% { transform: skew(-1deg); }
+  40% { transform: skew(0.5deg); }
+  60% { transform: skew(-0.3deg); }
+  80% { transform: skew(0.8deg); }
+  100% { transform: skew(0deg); }
+}
+
+/* Grid background pulse */
+@keyframes grid-pulse {
+  0%, 100% { opacity: 0.03; }
+  50% { opacity: 0.06; }
+}
+
+/* ---- Scrollbar Styles ---- */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #1f1f1f;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #00ff88;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Selection highlight custom theme */
+::selection {
+  background-color: #00ff88;
+  color: #000000;
+}
+
+/* Emitting soft neon glows for primary assets */
+.glow-primary-hover:hover {
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+}
+
+.glow-secondary-hover:hover {
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+}
