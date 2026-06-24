@@ -139,6 +139,80 @@ body {
   color: #000000;
 }
 
+.playful-theme ::selection {
+  background-color: #8B5CF6;
+  color: #ffffff;
+}
+
+/* Playful Geometric Theme Token Overrides */
+.playful-theme {
+  --background: #FFFDF5;
+  --foreground: #1E293B;
+  --font-inter: var(--font-plus-jakarta-sans);
+  --font-space-grotesk: var(--font-outfit);
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+/* Tactile grid dot pattern */
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(30, 41, 59, 0.08) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+
+/* Playful Geometric Shadows */
+.shadow-pop-sm {
+  box-shadow: 2px 2px 0px 0px #1E293B;
+}
+
+.shadow-pop {
+  box-shadow: 4px 4px 0px 0px #1E293B;
+}
+
+.shadow-pop-lg {
+  box-shadow: 6px 6px 0px 0px #1E293B;
+}
+
+.shadow-pop-xl {
+  box-shadow: 8px 8px 0px 0px #1E293B;
+}
+
+.shadow-pop-accent {
+  box-shadow: 4px 4px 0px 0px #8B5CF6;
+}
+
+.shadow-pop-secondary {
+  box-shadow: 4px 4px 0px 0px #F472B6;
+}
+
+.shadow-pop-tertiary {
+  box-shadow: 4px 4px 0px 0px #FBBF24;
+}
+
+.shadow-pop-quaternary {
+  box-shadow: 4px 4px 0px 0px #34D399;
+}
+
+/* Elastic bounce transition */
+.transition-bounce {
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Playful Theme Scrollbars */
+.playful-theme .scrollbar-thin::-webkit-scrollbar-track {
+  background: #FFFDF5;
+}
+
+.playful-theme .scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #E2E8F0;
+  border: 1px solid #1E293B;
+  border-radius: 4px;
+}
+
+.playful-theme .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #8B5CF6;
+}
+
 /* Emitting soft neon glows for primary assets */
 .glow-primary-hover:hover {
   box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);

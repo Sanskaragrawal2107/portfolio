@@ -47,25 +47,28 @@ export default function ProjectsSection() {
     window.dispatchEvent(prefillEvent);
   };
 
+  const cardShadows = ["shadow-pop-accent", "shadow-pop-secondary", "shadow-pop-tertiary"];
+  const textHighlights = ["text-[#8B5CF6]", "text-[#F472B6]", "text-[#FBBF24]"];
+
   return (
     <section
       id="projects-section"
-      className="py-24 px-6 md:px-12 max-w-7xl mx-auto w-full border-t border-[#1f1f1f] bg-[#0a0a0a]"
+      className="py-24 px-6 md:px-12 w-full border-t-2 border-[#1E293B] bg-[#FFFDF5] bg-dot-grid"
     >
-      <div className="mb-12 space-y-2">
-        <div className="flex items-center gap-2 text-xs text-[#00ff88] font-mono tracking-widest uppercase">
+      <div className="max-w-7xl mx-auto mb-12 space-y-4">
+        <div className="inline-flex items-center gap-2 text-xs text-[#1E293B] bg-[#34D399] border-2 border-[#1E293B] font-mono font-bold tracking-wider px-3.5 py-1 rounded-md shadow-pop-sm select-none">
           <Terminal className="w-4 h-4" />
           <span>Section 03 // Showcase</span>
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight font-heading text-zinc-100">
+        <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-[#1E293B]">
           Featured Engineering Projects
         </h2>
-        <p className="text-sm text-zinc-500 max-w-lg">
+        <p className="text-base text-[#64748B] max-w-lg font-medium">
           Custom built production-grade platforms and systems. Ask the AI assistant to query their architectural pipelines.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {projects.map((project, idx) => (
           <motion.div
             key={idx}
@@ -73,16 +76,13 @@ export default function ProjectsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ type: "spring", stiffness: 180, damping: 20, delay: idx * 0.1 }}
-            className="flex flex-col bg-[#111111]/40 backdrop-blur-md border border-[#1f1f1f] rounded-lg p-6 hover:border-[#00ff88]/30 transition-all duration-300 relative group shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+            className={`flex flex-col bg-white border-2 border-[#1E293B] rounded-2xl p-6 transition-bounce relative group ${cardShadows[idx % 3]} hover:scale-[1.02] hover:-rotate-1`}
           >
-            {/* Hover green line element */}
-            <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-[#00ff88] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-
             <div className="flex-1 space-y-4">
-              <h3 className="text-xl font-bold text-zinc-100 font-heading tracking-wide group-hover:text-[#00ff88] transition-colors">
+              <h3 className={`text-xl font-extrabold font-heading tracking-wide ${textHighlights[idx % 3]}`}>
                 {project.name}
               </h3>
-              <p className="text-sm text-zinc-400 leading-relaxed min-h-[60px]">
+              <p className="text-sm text-[#1E293B] leading-relaxed min-h-[60px] font-medium">
                 {project.description}
               </p>
 
@@ -91,7 +91,7 @@ export default function ProjectsSection() {
                 {project.tags.map((tag, tagIdx) => (
                   <span
                     key={tagIdx}
-                    className="px-2 py-0.5 rounded bg-[#1f1f1f]/60 text-[10px] text-zinc-300 font-mono border border-transparent hover:border-[#6366f1]/30 transition-colors"
+                    className="px-2.5 py-0.5 rounded-full bg-[#F1F5F9] text-[10px] text-[#64748B] font-bold border border-[#CBD5E1]"
                   >
                     {tag}
                   </span>
@@ -100,21 +100,21 @@ export default function ProjectsSection() {
             </div>
 
             {/* Action buttons */}
-            <div className="flex gap-3 mt-6 pt-4 border-t border-[#1f1f1f]">
+            <div className="flex gap-3 mt-6 pt-4 border-t-2 border-[#E2E8F0]">
               <a
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded bg-[#111111] hover:bg-[#1a1a1a] border border-[#1f1f1f] text-xs text-zinc-300 hover:text-zinc-100 transition-colors font-medium cursor-none interactive"
+                className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-white hover:bg-[#FBBF24] border-2 border-[#1E293B] text-xs font-bold text-[#1E293B] transition-bounce cursor-none interactive"
               >
                 <GithubIcon className="w-3.5 h-3.5" />
                 <span>GitHub</span>
               </a>
               <button
                 onClick={() => handleAskAI(project.name)}
-                className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded bg-[#00ff88]/10 hover:bg-[#00ff88]/20 border border-[#00ff88]/20 text-xs text-[#00ff88] transition-colors font-semibold cursor-none interactive"
+                className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-[#8B5CF6] hover:bg-[#7c3aed] border-2 border-[#1E293B] text-xs font-bold text-white shadow-pop-sm hover:shadow-pop transition-bounce active:translate-x-[1px] active:translate-y-[1px] active:shadow-pop-sm cursor-none interactive"
               >
-                <MessageSquarePlus className="w-3.5 h-3.5 animate-pulse" />
+                <MessageSquarePlus className="w-3.5 h-3.5" />
                 <span>Ask AI</span>
               </button>
             </div>

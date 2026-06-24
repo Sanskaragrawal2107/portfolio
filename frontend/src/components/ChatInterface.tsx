@@ -264,19 +264,21 @@ export default function ChatInterface() {
   return (
     <div
       id="chat-section"
-      className="h-screen w-full flex flex-col bg-[#0a0a0a] text-zinc-100 font-sans border-b border-[#1f1f1f]"
+      className="h-screen w-full flex flex-col bg-[#FFFDF5] bg-dot-grid text-[#1E293B] font-sans border-b-2 border-[#1E293B]"
     >
       {/* Top Header */}
-      <header className="h-14 border-b border-[#1f1f1f] bg-[#111111]/40 backdrop-blur-md px-6 flex items-center justify-between z-10 shrink-0">
+      <header className="h-14 border-b-2 border-[#1E293B] bg-[#FFFDF5] px-6 flex items-center justify-between z-10 shrink-0">
         <div className="flex items-center gap-2">
-          <Sparkles className="w-5 h-5 text-[#00ff88]" />
-          <span className="font-heading font-bold text-sm tracking-widest text-[#00ff88] uppercase">
+          <div className="p-1 rounded-lg bg-[#8B5CF6] border-2 border-[#1E293B] shadow-pop-sm">
+            <Sparkles className="w-5 h-5 text-white" />
+          </div>
+          <span className="font-heading font-extrabold text-base tracking-wide text-[#1E293B] uppercase">
             Sanskar.AI
           </span>
         </div>
-        <div className="flex items-center gap-2 bg-[#1f1f1f] px-3 py-1 rounded-full border border-zinc-800">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#00ff88] animate-pulse" />
-          <span className="text-[10px] text-zinc-400 font-mono tracking-wider">
+        <div className="flex items-center gap-2 bg-[#34D399] px-3.5 py-1 rounded-full border-2 border-[#1E293B] shadow-pop-sm">
+          <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+          <span className="text-[10px] text-[#1E293B] font-mono font-bold tracking-wider">
             SYSTEM_ONLINE
           </span>
         </div>
@@ -285,7 +287,7 @@ export default function ChatInterface() {
       {/* Main Core Layout: Chat + Sidebar */}
       <div className="flex-1 min-h-0 flex relative overflow-hidden">
         {/* Left Side: Chat Messages Feed */}
-        <div className="flex-1 flex flex-col min-w-0 bg-[#0a0a0a] relative">
+        <div className="flex-1 flex flex-col min-w-0 bg-[#FFFDF5] bg-dot-grid relative">
           <div ref={chatContainerRef} className="flex-1 overflow-y-auto px-6 py-8 space-y-6 scrollbar-thin">
             {messages.map((msg) => (
               <div key={msg.id} className="max-w-3xl mx-auto space-y-4">
@@ -296,10 +298,10 @@ export default function ChatInterface() {
                 >
                   {/* Avatar */}
                   <div
-                    className={`w-8 h-8 rounded-full flex items-center justify-center border text-[11px] font-mono shrink-0 select-none ${
+                    className={`w-9 h-9 rounded-full flex items-center justify-center border-2 border-[#1E293B] text-[11px] font-mono shrink-0 select-none shadow-pop-sm ${
                       msg.sender === "user"
-                        ? "bg-zinc-800 border-zinc-700 text-zinc-200"
-                        : "bg-[#00ff88]/10 border-[#00ff88]/20 text-[#00ff88]"
+                        ? "bg-[#F472B6] text-white"
+                        : "bg-[#FBBF24] text-[#1E293B] font-bold"
                     }`}
                   >
                     {msg.sender === "user" ? "USR" : "AI"}
@@ -307,18 +309,18 @@ export default function ChatInterface() {
 
                   {/* Chat Bubble */}
                   <div
-                    className={`min-w-0 flex-1 px-4 py-3 rounded-lg text-sm leading-relaxed ${
+                    className={`min-w-0 flex-1 px-5 py-4 border-2 border-[#1E293B] text-sm leading-relaxed transition-bounce ${
                       msg.sender === "user"
-                        ? "bg-[#111111] border border-zinc-800 text-zinc-200"
-                        : "bg-transparent text-zinc-300 font-light"
+                        ? "bg-[#8B5CF6] text-white shadow-pop-accent rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-none font-medium"
+                        : "bg-white text-[#1E293B] shadow-pop-secondary rounded-tl-2xl rounded-tr-2xl rounded-br-2xl rounded-bl-none"
                     }`}
                   >
                     {msg.sender === "ai" ? (
-                      <div className="prose prose-invert prose-xs max-w-none text-zinc-300">
+                      <div className="prose prose-xs max-w-none text-[#1E293B] prose-headings:font-heading prose-headings:font-bold prose-headings:text-[#1E293B] prose-p:text-[#1E293B] prose-strong:text-[#1E293B] prose-code:text-[#8B5CF6] prose-code:bg-slate-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-a:text-[#8B5CF6] prose-a:underline">
                         <ReactMarkdown>{msg.text}</ReactMarkdown>
                       </div>
                     ) : (
-                      <p className="whitespace-pre-wrap">{msg.text}</p>
+                      <p className="whitespace-pre-wrap font-medium">{msg.text}</p>
                     )}
 
                     {/* Mobile Inline Reactive Components (rendered below message) */}
@@ -350,13 +352,13 @@ export default function ChatInterface() {
             {/* Bouncing Dots typing indicator */}
             {isTyping && (
               <div className="max-w-3xl mx-auto flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-[#00ff88]/10 border border-[#00ff88]/20 flex items-center justify-center text-[11px] font-mono text-[#00ff88] shrink-0">
+                <div className="w-9 h-9 rounded-full bg-[#FBBF24] border-2 border-[#1E293B] flex items-center justify-center text-[11px] font-mono text-[#1E293B] shadow-pop-sm shrink-0 font-bold">
                   AI
                 </div>
-                <div className="bg-[#111111] border border-[#1f1f1f] rounded-lg px-4 py-3 flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 bg-[#00ff88] rounded-full animate-bounce [animation-delay:-0.3s]" />
-                  <span className="w-1.5 h-1.5 bg-[#00ff88] rounded-full animate-bounce [animation-delay:-0.15s]" />
-                  <span className="w-1.5 h-1.5 bg-[#00ff88] rounded-full animate-bounce" />
+                <div className="bg-white border-2 border-[#1E293B] rounded-tl-2xl rounded-tr-2xl rounded-br-2xl rounded-bl-none px-5 py-4 flex items-center gap-1.5 shadow-pop-sm">
+                  <span className="w-2 h-2 bg-[#8B5CF6] rounded-full animate-bounce [animation-delay:-0.3s]" />
+                  <span className="w-2 h-2 bg-[#F472B6] rounded-full animate-bounce [animation-delay:-0.15s]" />
+                  <span className="w-2 h-2 bg-[#FBBF24] rounded-full animate-bounce" />
                 </div>
               </div>
             )}
@@ -364,10 +366,10 @@ export default function ChatInterface() {
           </div>
 
           {/* Bottom Area: Suggestions + Input */}
-          <div className="border-t border-[#1f1f1f] bg-[#111111]/10 px-6 py-4 shrink-0">
+          <div className="border-t-2 border-[#1E293B] bg-[#FFFDF5] px-6 py-5 shrink-0">
             <div className="max-w-3xl mx-auto space-y-4">
               {/* Suggestion Chips */}
-              <div className="relative overflow-hidden h-8 flex items-center">
+              <div className="relative overflow-hidden h-9 flex items-center">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={chipOffset}
@@ -381,7 +383,7 @@ export default function ChatInterface() {
                       <button
                         key={index}
                         onClick={() => handleSubmit(undefined, suggest)}
-                        className="shrink-0 px-3.5 py-1 rounded-full bg-[#111111] hover:bg-[#1f1f1f] border border-[#1f1f1f] hover:border-[#00ff88]/30 text-xs text-zinc-400 hover:text-zinc-200 transition-all duration-200 cursor-none interactive"
+                        className="shrink-0 px-4 py-1.5 rounded-full bg-white hover:bg-[#FBBF24] border-2 border-[#1E293B] shadow-pop-sm text-xs font-semibold text-[#1E293B] transition-bounce cursor-none interactive"
                       >
                         {suggest}
                       </button>
@@ -397,11 +399,11 @@ export default function ChatInterface() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Ask Sanskar's AI..."
-                  className="flex-1 bg-[#111111] border border-[#1f1f1f] hover:border-[#00ff88]/20 focus:border-[#00ff88]/50 rounded-lg py-3.5 pl-4 pr-12 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-1 focus:ring-[#00ff88]/30 transition-all duration-300 cursor-none interactive"
+                  className="flex-1 bg-white border-2 border-[#1E293B] focus:border-[#8B5CF6] rounded-xl py-3.5 pl-4 pr-14 text-sm text-[#1E293B] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#8B5CF6]/20 transition-all duration-200 shadow-pop-sm"
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-2 p-2 rounded-md bg-[#00ff88]/10 hover:bg-[#00ff88] text-[#00ff88] hover:text-black border border-[#00ff88]/20 hover:border-transparent transition-all duration-300 cursor-none interactive"
+                  className="absolute right-2 top-2 p-2.5 rounded-lg bg-[#8B5CF6] hover:bg-[#7c3aed] text-white border-2 border-[#1E293B] shadow-pop-sm transition-bounce active:translate-x-[1px] active:translate-y-[1px] active:shadow-pop-sm cursor-none interactive"
                 >
                   <Send className="w-4 h-4" />
                 </button>
@@ -422,11 +424,11 @@ export default function ChatInterface() {
                 stiffness: 220,
                 damping: 24,
               }}
-              className="hidden md:flex flex-col border-l border-[#1f1f1f] bg-[#0c0c0c] overflow-y-auto p-4 space-y-4 scrollbar-thin select-none shrink-0"
+              className="hidden md:flex flex-col border-l-2 border-[#1E293B] bg-[#FFFDF5] overflow-y-auto p-4 space-y-4 scrollbar-thin select-none shrink-0"
             >
-              <div className="flex items-center gap-1.5 px-1 py-0.5 text-[10px] text-zinc-500 font-mono border-b border-[#1f1f1f] pb-2 mb-1">
-                <MessageSquare className="w-3.5 h-3.5 text-[#00ff88]" />
-                <span>LIVE_INTEGRATIONS</span>
+              <div className="flex items-center gap-2 px-1 py-1 text-xs text-[#1E293B] font-heading font-extrabold border-b-2 border-[#1E293B] pb-2 mb-1">
+                <MessageSquare className="w-4 h-4 text-[#8B5CF6]" />
+                <span className="tracking-wide">LIVE INTEGRATIONS</span>
               </div>
 
               {activeSidebarComponents.map((name) => (

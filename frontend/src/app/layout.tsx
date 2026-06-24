@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Inter, Space_Grotesk, JetBrains_Mono, Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 // Import Scroll and Custom Cursor Provider
@@ -25,6 +25,18 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-plus-jakarta-sans",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Sanskar.AI // Intelligent Portfolio Experience",
   description:
@@ -47,9 +59,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${outfit.variable} ${plusJakartaSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-black text-zinc-100 selection:bg-[#00ff88] selection:text-black">
+      <body className="min-h-full bg-black text-zinc-100 selection:bg-[#8B5CF6] selection:text-white transition-colors duration-500">
         <ScrollProvider>
           <CustomCursor />
           {children}

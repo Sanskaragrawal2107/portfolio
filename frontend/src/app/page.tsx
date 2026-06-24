@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -16,6 +16,18 @@ const OpeningScene = dynamic(
 
 export default function Home() {
   const [booted, setBooted] = useState(false);
+
+  useEffect(() => {
+    if (booted) {
+      document.body.classList.add("playful-theme");
+      document.body.style.backgroundColor = "#FFFDF5";
+      document.body.style.color = "#1E293B";
+    } else {
+      document.body.classList.remove("playful-theme");
+      document.body.style.backgroundColor = "#000000";
+      document.body.style.color = "#f0f0f0";
+    }
+  }, [booted]);
 
   const handleSceneComplete = (section?: "about" | "skills" | "experience" | "projects") => {
     setBooted(true);
@@ -55,7 +67,7 @@ export default function Home() {
   };
 
   return (
-    <main className="w-full min-h-screen bg-black">
+    <main className={`w-full min-h-screen transition-colors duration-500 ${booted ? "bg-[#FFFDF5] text-[#1E293B]" : "bg-black text-white"}`}>
       <AnimatePresence mode="wait">
         {!booted ? (
           <motion.div

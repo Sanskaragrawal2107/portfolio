@@ -35,9 +35,10 @@ export default function CTASection() {
   };
 
   return (
-    <section className="min-h-screen bg-black flex flex-col justify-between items-center py-20 px-6 relative overflow-hidden text-center select-none border-t border-[#1f1f1f]">
-      {/* Glow background accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#00ff88] rounded-full blur-3xl opacity-5 pointer-events-none" />
+    <section className="min-h-screen bg-[#FFFDF5] bg-dot-grid flex flex-col justify-between items-center py-20 px-6 relative overflow-hidden text-center select-none border-t-2 border-[#1E293B]">
+      {/* Decorative floating shapes in background */}
+      <div className="absolute top-12 left-12 w-16 h-16 rounded-full bg-[#F472B6] border-2 border-[#1E293B] shadow-pop-sm pointer-events-none opacity-20 hidden md:block" />
+      <div className="absolute bottom-24 right-16 w-20 h-20 bg-[#FBBF24] border-2 border-[#1E293B] shadow-pop pointer-events-none opacity-20 hidden md:block rotate-12" />
 
       {/* spacer to push center content down */}
       <div className="h-10" />
@@ -48,31 +49,31 @@ export default function CTASection() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="max-w-3xl space-y-6"
+        className="max-w-3xl space-y-6 z-10"
       >
         <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
           {words1.map((word, idx) => (
             <motion.span
               key={idx}
               variants={wordVariants}
-              className="text-2xl sm:text-4xl md:text-5xl font-heading font-medium tracking-tight text-zinc-400"
+              className="text-2xl sm:text-4xl md:text-5xl font-heading font-medium tracking-tight text-[#64748B]"
             >
               {word}
             </motion.span>
           ))}
         </div>
 
-        <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
+        <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 pb-4">
           {words2.map((word, idx) => (
             <motion.span
               key={idx}
               variants={wordVariants}
-              className="text-3xl sm:text-5xl md:text-6xl font-heading font-extrabold tracking-tight text-zinc-100"
+              className="text-3xl sm:text-5xl md:text-6xl font-heading font-extrabold tracking-tight text-[#1E293B]"
             >
               {word === "build" ? (
-                <span className="text-[#00ff88] relative">
+                <span className="text-[#8B5CF6] relative inline-block">
                   build
-                  <span className="absolute -bottom-1.5 left-0 right-0 h-1 bg-[#00ff88]/30 rounded-full" />
+                  <span className="absolute -bottom-1 left-0 right-0 h-2 bg-[#F472B6] rounded-full" />
                 </span>
               ) : (
                 word
@@ -90,17 +91,17 @@ export default function CTASection() {
           className="flex flex-col sm:flex-row justify-center gap-4 pt-10"
         >
           <a
-            href="mailto:sanskar.agrawal@example.com" // [FILL IN: Your contact email]
-            className="flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-[#00ff88] hover:bg-[#02e67c] text-black text-sm font-bold shadow-[0_0_15px_rgba(0,255,136,0.35)] hover:shadow-[0_0_25px_rgba(0,255,136,0.55)] transition-all duration-300 cursor-none interactive"
+            href="mailto:sanskar.agrawal@example.com"
+            className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#8B5CF6] hover:bg-[#7c3aed] border-2 border-[#1E293B] text-white text-sm font-bold shadow-pop hover:shadow-pop-lg transition-bounce active:translate-x-[1px] active:translate-y-[1px] active:shadow-pop cursor-none interactive"
           >
             <Mail className="w-4 h-4" />
             <span>Let's Connect</span>
           </a>
           <a
-            href="https://github.com/sanskaragrawal" // [FILL IN: Your Github link]
+            href="https://github.com/sanskaragrawal"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 px-6 py-3.5 rounded bg-[#111111] hover:bg-[#1a1a1a] border border-[#1f1f1f] hover:border-[#00ff88]/40 text-sm text-zinc-300 hover:text-zinc-100 transition-all duration-300 cursor-none interactive"
+            className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-[#FBBF24] border-2 border-[#1E293B] shadow-pop-sm hover:shadow-pop text-sm font-bold text-[#1E293B] transition-bounce cursor-none interactive"
           >
             <GithubIcon className="w-4 h-4" />
             <span>View GitHub</span>
@@ -114,13 +115,15 @@ export default function CTASection() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 1.2 }}
-        className="w-full max-w-lg space-y-3 font-mono text-[10px] text-zinc-600 mt-20"
+        className="w-full max-w-lg space-y-4 font-mono text-[10px] text-[#64748B] mt-20"
       >
-        <div className="flex justify-center items-center gap-2">
-          <Terminal className="w-3 h-3 text-[#00ff88]" />
-          <span>Built with RAG + LangGraph + MCP</span>
+        <div className="flex justify-center items-center">
+          <div className="flex items-center gap-2 px-3 py-1 rounded bg-[#34D399] border-2 border-[#1E293B] text-[#1E293B] font-bold shadow-pop-sm">
+            <Terminal className="w-3.5 h-3.5 text-[#1E293B]" />
+            <span>Built with RAG + LangGraph + MCP</span>
+          </div>
         </div>
-        <p>
+        <p className="font-semibold">
           &copy; {new Date().getFullYear()} Sanskar. All Rights Reserved. Production v1.0
         </p>
       </motion.div>
