@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Security -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+  <!-- Primary Meta Tags -->
+  <title>Hire A Human | Verified Skill-Based Hiring Platform</title>
+  <meta name="title" content="Hire A Human | Verified Skill-Based Hiring Platform" />
+  <meta name="description"
+    content="Hire A Human is a skill-based hiring platform that helps companies hire verified engineers without relying on resumes. Real GitHub verification. Zero resume spam." />
+  <meta name="keywords"
+    content="Hire A Human, HireAHuman, hire a human platform, skill-based hiring, GitHub verified jobs, AI hiring platform, tech hiring without resumes, verified engineers, developer recruitment, remote engineering jobs, India tech jobs" />
+  <meta name="author" content="HireAHuman" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Hreflang Tags -->
+  <link rel="alternate" hreflang="en" href="https://hire-a-human.app/" />
+  <link rel="alternate" hreflang="x-default" href="https://hire-a-human.app/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hire-a-human.app/" />
+  <meta property="og:title" content="Hire A Human – Skill-Based Hiring Platform" />
+  <meta property="og:description"
+    content="Hire verified engineers based on real skills, not resumes. Hire A Human is the platform that makes GitHub your new CV." />
+  <meta property="og:image" content="https://hire-a-human.app/og-image.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://hire-a-human.app/" />
+  <meta property="twitter:title" content="Hire A Human – Skill-Based Hiring Platform" />
+  <meta property="twitter:description"
+    content="Hire verified engineers based on real skills, not resumes. Join Hire A Human – the platform where GitHub commits matter more than CVs." />
+  <meta property="twitter:image" content="https://hire-a-human.app/twitter-card.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://hire-a-human.app/" />
+
+  <!-- Preconnect to critical origins for faster loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://api.dicebear.com" />
+
+  <!-- DNS prefetch for third-party services -->
+  <link rel="dns-prefetch" href="https://jssdk.payu.in" />
+
+  <script type="module" crossorigin src="/assets/index-zJdkpz6B.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-Cn8xt2Gj.js">
+  <link rel="modulepreload" crossorigin href="/assets/vendor-motion-kptLV4Ka.js">
+  <link rel="modulepreload" crossorigin href="/assets/vendor-tambo-DwziI5TV.js">
+  <link rel="modulepreload" crossorigin href="/assets/vendor-ui-Bb1vZsDH.js">
+  <link rel="modulepreload" crossorigin href="/assets/vendor-react-W3r4W_uj.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-BXFoBViz.css">
+</head>
+
+<!-- Structured Data: Organization Schema -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Hire A Human",
+      "alternateName": "HireAHuman",
+      "url": "https://hire-a-human.app/",
+      "logo": "https://hire-a-human.app/logo.png",
+      "description": "Hire A Human is a skill-based hiring platform that helps companies hire verified engineers without relying on resumes.",
+      "sameAs": [
+        "https://twitter.com/hireahuman",
+        "https://www.linkedin.com/company/hireahuman",
+        "https://www.youtube.com/@hireahuman",
+        "https://www.instagram.com/hireahuman",
+        "https://www.facebook.com/hireahuman"
+      ]
+    }
+  </script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is the best website for hiring humans with engineering skills?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HireAHuman is a platform for hiring engineers verified through their GitHub activity. Unlike traditional freelance hiring platforms, we analyze actual code contributions to verify skills."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I hire people for jobs in tech?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can hire GitHub-verified engineers on HireAHuman.app for freelance, contract, or full-time positions."
+        }
+      }]
+    }
+  </script>
+
+<body>
+  <div id="root">
+    <header>
+      <h1>Hire A Human – Skill-Based Hiring Without Resumes</h1>
+      <p>The day AI started hiring humans. You used to apply for jobs. Now jobs find you.</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="/join">For Engineers</a></li>
+        <li><a href="/verify">For Companies</a></li>
+        <li><a href="/blog">Insights</a></li>
+        <li><a href="/docs">Docs</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>The Problem: Resume Spam is a DDoS Attack</h2>
+        <p>
+          In 2026, a single job posting for a "Junior React Developer" receives over 400 applications.
+          85% of them are unqualified spam generated by AI tools. For recruiters, this manages to be a
+          distraction that prevents them from finding real talent. Great engineers get buried under
+          a pile of keyword-stuffed PDFs.
+        </p>
+        <p>
+          Traditional hiring is broken. Resumes are marketing documents that often exaggerate skills.
+          GitHub, however, is a ledger of truth. Code doesn't lie.
+        </p>
+      </section>
+
+      <section>
+        <h2>The Solution: Proof of Work via GitHub Verification</h2>
+        <p>
+          At HireAHuman, we believe resumes are obsolete. We verify engineers based on their actual
+          GitHub activity. We look at commit logs, pull request history, contribution graphs, and
+          real project complexity. If you don't commit code, you don't get matched. It is that simple.
+        </p>
+        <h3>How Our Reality Score Works</h3>
+        <p>
+          Our AI analyzes your public GitHub profile to calculate a "Reality Score". This score
+          evaluates consistency (do you code every week?), complexity (are you architecting systems?),
+          collaboration (do you merge PRs?), and impact. This ensures that only serious engineers
+          who maintain active repositories are matched with top companies.
+        </p>
+      </section>
+
+      <section>
+        <h2>For Companies: Hire Real Builders</h2>
+        <p>
+          Stop hiring paper tigers. Start hiring builders. Our platform eliminates the noise of
+          fake resumes. We require companies to verify their business presence and pay a fully
+          refundable deposit to join, ensuring that only legitimate employers are on our platform.
+          This creates a safe haven for engineers and a high-quality talent pool for recruiters.
+        </p>
+        <h3>AI-Native Hiring with MCP</h3>
+        <p>
+          We use the Model Context Protocol (MCP) to connect AI agents directly to our database.
+          Recruiters can query our database using natural language to find engineers with specific
+          skills, like "Rust experience with recent commits," and our AI agent performs a deep
+          analysis to return the best matches.
+        </p>
+      </section>
+
+      <section>
+        <h2>Key Features</h2>
+        <ul>
+          <li><strong>Source Code Verification:</strong> Deep analysis of GitHub repositories.</li>
+          <li><strong>Bluff Detection:</strong> Identify if code is just a fork or real work.</li>
+          <li><strong>Verified Company Badges:</strong> Ensure employers are legitimate.</li>
+          <li><strong>AI Matching:</strong> Vector-based skill matching beyond simple keywords.</li>
+          <li><strong>Privacy First:</strong> Your resume is locked and only shown to matched employers.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Connect With Us</h2>
+        <p>Follow us on social media for the latest updates on tech hiring trends:</p>
+        <ul>
+          <li><a href="https://twitter.com/hireahuman">Follow us on X (Twitter)</a></li>
+          <li><a href="https://www.linkedin.com/company/hireahuman">Connect on LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@hireahuman">Watch on YouTube</a></li>
+          <li><a href="https://www.instagram.com/hireahuman">Follow on Instagram</a></li>
+          <li><a href="https://www.facebook.com/hireahuman">Like us on Facebook</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 HireAHuman Inc. 36 Tilak Path Gulab Bhawan Flat No. 104 Indore MP | Built by Sanskar Agrawal | +91
+        9406820661 | sanskar21072005@gmail.com</p>
+    </footer>
+  </div>
+</body>
+
+</html>

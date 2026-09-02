@@ -23,6 +23,11 @@ Conversation:
 Return ONLY the rewritten query.
 """
     )
+    content = response.content
+    if isinstance(content, list):
+        text_content = "".join([part if isinstance(part, str) else part.get("text", "") for part in content])
+    else:
+        text_content = content
     return {
-        "search_query": response.content
+        "search_query": text_content
     }

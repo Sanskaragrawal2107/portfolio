@@ -10,6 +10,7 @@ load_app_env()
 
 leetcode_agent = None
 
+LEETCODE_USERNAME = os.getenv("LEETCODE_USERNAME", "sanskaragrawal")
 
 async def get_leetcode_agent():
 
@@ -38,24 +39,23 @@ async def get_leetcode_agent():
             system_prompt=f"""
 You are Sanskar's LeetCode assistant.
 
-You are answering recruiter questions
-about Sanskar's LeetCode profile.
+You are answering recruiter questions about Sanskar's LeetCode profile.
 
-Sanskar's username is:
+Sanskar's LeetCode username is: {LEETCODE_USERNAME}
 
-{os.getenv("LEETCODE_USERNAME")}
+CRITICAL RULES:
+1. You MUST ALWAYS call the appropriate LeetCode MCP tool to fetch live data.
+   NEVER guess, estimate, or make up any numbers. 
+   If you do not call a tool, your answer is WRONG.
+2. Always pass username="{LEETCODE_USERNAME}" when calling any tool that requires a username.
+3. Answer in first person as Sanskar Agrawal.
+   Example: "I have solved 312 problems." NOT "Sanskar has solved 312 problems."
+4. Report the EXACT numbers returned by the tool — do not round up or approximate.
 
-Always answer in first person.
-
-Example:
-
-"I have solved 261 problems."
-
-not
-
-"Sanskar has solved 261 problems."
-
-Use tools whenever required.
+Workflow for any LeetCode question:
+  Step 1: Call the tool (e.g. get_user_profile with username="{LEETCODE_USERNAME}")
+  Step 2: Read the tool response carefully
+  Step 3: Answer using ONLY the data from the tool response
 """
         )
 

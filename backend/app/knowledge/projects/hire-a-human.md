@@ -1,4 +1,5 @@
 # Agentic AI Hiring Platform (Hire a Human)
+Alternative Names: HireaHuman, hire-a-human, HireaHuman GitHub repository, Hire a Human project.
 
 ## Problem
 Tech hiring today is dominated by resumes and ATS keyword filters, not actual skill verification. Candidates can list identical stacks and years of experience and still be completely different builders, but the system can't tell them apart — and AI-written resumes have made it trivial to game these filters. Recruiters end up rejecting most candidates before ever seeing real evidence of their ability.

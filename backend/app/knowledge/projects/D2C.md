@@ -1,4 +1,5 @@
 # D2C AI Employee (D2C Intelligence Platform)
+Alternative Names: Ship Rocket Submission, Ship-Rocket-Submission, D2C AI Employee, DC AI Employee, D2C Intelligence Platform, Shopify Razorpay Shiprocket Meta Ads project.
 
 ## Problem
 D2C founders run their business across disconnected platforms — Shopify (orders), Razorpay (payments), Shiprocket (logistics), and Meta Ads (advertising) — with no single system showing whether the business is actually profitable. Founders manually cross-check each dashboard, export to Excel, and calculate true profit by hand, often missing hidden margin leaks like high return-to-origin (RTO) rates or uncollected payment gaps.

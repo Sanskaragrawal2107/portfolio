@@ -1,54 +1,48 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, JetBrains_Mono, Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-// Import Scroll and Custom Cursor Provider
-import ScrollProvider from "@/components/ScrollProvider";
-import CustomCursor from "@/components/CustomCursor";
-
-// Load Google Fonts
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-});
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-  display: "swap",
-});
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-plus-jakarta-sans",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  title: "Sanskar.AI // Intelligent Portfolio Experience",
+  title: "Sanskar Agrawal — Applied AI Engineer & Backend Systems Architect | Available for Hire",
   description:
-    "Interactive AI Chat portfolio for Sanskar (AI Systems Engineer). Built on LangGraph, FastAPI, and live Model Context Protocol integrations to LeetCode and GitHub.",
-  keywords: ["AI Engineer", "LangGraph", "RAG Pipeline", "Next.js Portfolio", "Model Context Protocol", "Developer"],
-  authors: [{ name: "Sanskar" }],
-  openGraph: {
-    title: "Sanskar.AI // Intelligent Portfolio Experience",
-    description:
-      "Interactive AI Chat portfolio for Sanskar (AI Systems Engineer). Built on LangGraph, FastAPI, and live Model Context Protocol integrations.",
-    type: "website",
+    "Hire Sanskar Agrawal — Applied AI Engineer, Backend Engineer, and Agentic Systems Specialist. Expert in LangGraph, LangChain, custom FastMCP servers, RAG pipelines, LiveKit voice AI, and Python/FastAPI production backends. Available for full-time and contract roles worldwide.",
+  keywords: [
+    "Hire AI Engineer",
+    "Hire Applied AI Engineer",
+    "Hire LangGraph Developer",
+    "Hire Backend Engineer",
+    "Hire Agentic AI Engineer",
+    "Hire RAG Specialist",
+    "Custom MCP Developer",
+    "FastMCP Developer",
+    "Hire Python FastAPI Developer",
+    "Voice AI Engineer LiveKit",
+    "Sanskar Agrawal",
+    "AI Engineer Portfolio",
+    "Remote AI Engineer",
+    "Full-Stack AI Developer"
+  ],
+  authors: [{ name: "Sanskar Agrawal", url: "https://www.sanskaragrawal.tech/" }],
+  creator: "Sanskar Agrawal",
+  publisher: "Sanskar Agrawal",
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://www.sanskaragrawal.tech/",
   },
+  openGraph: {
+    type: "profile",
+    title: "Sanskar Agrawal — Applied AI Engineer & Backend Architect | Available for Hire",
+    description: "Applied AI Engineer & Backend Systems Architect available for hire worldwide. Building production agentic systems, LangGraph, RAG, MCP servers & full-stack web products.",
+    url: "https://www.sanskaragrawal.tech/",
+    siteName: "Sanskar Agrawal Portfolio",
+    locale: "en_IN",
+    images: [{ url: "https://www.sanskaragrawal.tech/assets/images/thumbs/sanskar-portrait.png", alt: "Sanskar Agrawal" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sanskar Agrawal — Applied AI Engineer & Backend Architect | Available for Hire",
+    description: "Applied AI Engineer building production agentic AI systems, LangGraph architectures, RAG pipelines, and MCP servers for global teams.",
+    images: ["https://www.sanskaragrawal.tech/assets/images/thumbs/sanskar-portrait.png"],
+  }
 };
 
 export default function RootLayout({
@@ -57,15 +51,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${outfit.variable} ${plusJakartaSans.variable} h-full antialiased`}
-    >
-      <body className="min-h-full bg-black text-zinc-100 selection:bg-[#8B5CF6] selection:text-white transition-colors duration-500">
-        <ScrollProvider>
-          <CustomCursor />
-          {children}
-        </ScrollProvider>
+    <html lang="en" className="h-full w-full m-0 p-0 overflow-hidden">
+      <body className="h-full w-full m-0 p-0 overflow-hidden bg-black">
+        {children}
       </body>
     </html>
   );
