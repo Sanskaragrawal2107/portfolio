@@ -153,7 +153,9 @@ async def chat_stream(request: ChatRequest):
 
 @app.post("/api/contact")
 async def contact(request: ContactRequest):
-    webhook_url = "https://hook.eu2.make.com/zhichmdb3s3ue60p7xj1c49idu2dufub"
+    webhook_url = os.getenv("MAKE_WEBHOOK_URL", "")
+    if not webhook_url:
+        return {"success": False, "error": "Webhook not configured"}
     async with httpx.AsyncClient() as client:
         response = await client.post(
             webhook_url,

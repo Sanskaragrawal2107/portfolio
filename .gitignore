@@ -14,6 +14,12 @@ out/
 .env
 .env.local
 .env.*.local
+*.env
+
+# Dump files
+projects.json
+workspaces.json
+*.log
 
 # IDE/Editor files
 .vscode/

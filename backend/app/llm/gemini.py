@@ -2,8 +2,12 @@ import os
 from langchain_openai import ChatOpenAI
 from langchain_google_genai import ChatGoogleGenerativeAI
 
+from app.env import load_app_env
+
+load_app_env()
+
 openai_key = os.getenv("OPENAI_API_KEY")
-gemini_key = os.getenv("GEMINI_API_KEY", "AIzaSyAUzZ8YoG8QFhvoCfO1FXyRkC_i4i63Jgc")
+gemini_key = os.getenv("GEMINI_API_KEY")
 gemini_model = os.getenv("GEMINI_MODEL", "gemini-flash-lite-latest")
 
 openai_model = os.getenv("OPENAI_MODEL", "gpt-5.6-luna")
