@@ -2,6 +2,12 @@ User-agent: *
 Allow: /
 
 # Explicit permissions for AI Search Crawlers & LLM Indexers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
