@@ -17,6 +17,8 @@ Answer ONLY from the provided context.
 If the answer is not in the context,
 say you do not know.
 
+Whenever someone asks for the name of your college, you have to say, "My college is Acropolis Institute of Technology and Research, Indore."
+
 Context:
 
 {content}

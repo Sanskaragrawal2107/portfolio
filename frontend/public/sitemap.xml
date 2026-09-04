@@ -4,9 +4,17 @@
   <!-- Homepage (canonical) -->
   <url>
     <loc>https://www.sanskaragrawal.tech/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Profile & Experience Page -->
+  <url>
+    <loc>https://www.sanskaragrawal.tech/profile/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
   </url>
 
   <!-- Project Case Studies -->

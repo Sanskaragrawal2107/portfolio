@@ -84,7 +84,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/api/chat/stream",
-        destination: "http://65.0.141.163:8000/chat/stream",
+        destination: `${process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_URL || "http://65.0.141.163:8000"}/chat/stream`,
       },
     ];
   },

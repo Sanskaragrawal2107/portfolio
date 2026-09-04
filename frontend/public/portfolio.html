@@ -2336,15 +2336,18 @@
           var reader = res.body.getReader();
           var decoder = new TextDecoder();
           var fullText = '';
+          var buffer = '';
           aiDiv.classList.remove('typing');
 
           while (true) {
             var _ref = await reader.read();
             var done = _ref.done, value = _ref.value;
             if (done) break;
-            var lines = decoder.decode(value).split('\n');
+            buffer += decoder.decode(value, { stream: true });
+            var lines = buffer.split('\n');
+            buffer = lines.pop() || '';
             for (var i = 0; i < lines.length; i++) {
-              var line = lines[i];
+              var line = lines[i].trim();
               if (line.startsWith('data: ')) {
                 try {
                   var data = JSON.parse(line.slice(6));
@@ -2371,6 +2374,13 @@
         isStreaming = false;
         scrollToBottom();
       };
+
+      function scrollToBottom() {
+        var msgs = document.getElementById('scp-messages');
+        if (msgs) {
+          msgs.scrollTop = msgs.scrollHeight;
+        }
+      }
 
       function appendMsg(text, type) {
         var msgs = document.getElementById('scp-messages');

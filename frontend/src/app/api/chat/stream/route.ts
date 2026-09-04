@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 
-// Always call the VPS backend directly — server-side, no mixed content
-const BACKEND_URL = "http://65.0.141.163:8000";
+// VPS backend by default, or override with env variable
+const BACKEND_URL = process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_URL || "http://65.0.141.163:8000";
 
 export async function POST(req: NextRequest) {
   try {
