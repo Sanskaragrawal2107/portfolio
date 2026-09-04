@@ -25,3 +25,9 @@ I want to spend my career fixing broken systems that quietly decide people's liv
 
 ## Location
 Indore, Madhya Pradesh, India
+
+## Contact Information
+- **Phone:** +91-9406820661
+- **Email:** sanskar21072005@gmail.com / sanskaragrawal230025@acropolis.in
+- **LinkedIn:** https://www.linkedin.com/in/sanskar25/
+- **GitHub:** https://github.com/Sanskaragrawal2107

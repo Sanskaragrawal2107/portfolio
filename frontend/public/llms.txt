@@ -14,7 +14,7 @@
 - **LeetCode:** https://leetcode.com/u/sanskaragrawal/ (313+ Solved: 139 Easy, 160 Medium, 14 Hard)
 - **Education:** B.Tech Computer Science and Engineering, Acropolis Institute of Technology and Research, Indore (Aug 2023 - Jun 2027)
 - **Direct Email:** sanskar21072005@gmail.com
-- **Phone:** +91-9131652702
+- **Phone:** +91-9406820661
 
 ## Professional Summary
 Sanskar Agrawal is an AI/ML Engineer and Applied AI Systems Architect based in Indore, India, building production AI systems and full-stack software products for startups, companies, and remote teams worldwide. He specializes in production agentic AI systems, hierarchical multi-agent architectures using LangGraph and LangChain, custom MCP servers via FastMCP, RAG pipelines with ChromaDB and Pinecone, real-time voice AI agents using LiveKit and Twilio, and complete full-stack web products using React, TypeScript, Python, and FastAPI. He can be approached directly for immediate hire.
@@ -162,5 +162,5 @@ A: Sanskar Agrawal builds AI-powered business automation — including OCR pipel
 
 ## Contact
 - **Email:** sanskar21072005@gmail.com
-- **Phone:** +91-9131652702
+- **Phone:** +91-9406820661
 - **LinkedIn:** https://www.linkedin.com/in/sanskar25/

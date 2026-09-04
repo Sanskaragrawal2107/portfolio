@@ -4,6 +4,45 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   output: "standalone",
   compress: true,
+  async redirects() {
+    return [
+      {
+        source: "/index.html",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/about.html",
+        destination: "/profile/",
+        permanent: true,
+      },
+      {
+        source: "/about",
+        destination: "/profile/",
+        permanent: true,
+      },
+      {
+        source: "/service-details.html",
+        destination: "/services/ai-development/",
+        permanent: true,
+      },
+      {
+        source: "/service-details",
+        destination: "/services/ai-development/",
+        permanent: true,
+      },
+      {
+        source: "/services",
+        destination: "/services/ai-development/",
+        permanent: true,
+      },
+      {
+        source: "/projects",
+        destination: "/#projects",
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     return [
       {
