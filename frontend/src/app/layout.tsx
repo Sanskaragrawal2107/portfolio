@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sanskar Agrawal — AI/ML Engineer & Applied AI Architect",
+  title: "Sanskar Agrawal — AI Engineer Portfolio 2026 | LangGraph & RAG",
   description:
-    "Sanskar Agrawal is an AI/ML Engineer specializing in LangGraph agentic systems, RAG pipelines, custom FastMCP servers, and Python FastAPI. Available for hire.",
+    "AI Engineer candidate portfolio (2026) in India. Sanskar Agrawal specializes in LangGraph multi-agent systems, custom FastMCP servers, RAG, and FastAPI backends.",
   keywords: [
     "Hire AI Engineer",
     "Hire Applied AI Engineer",

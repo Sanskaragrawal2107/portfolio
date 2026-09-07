@@ -51,6 +51,14 @@ const nextConfig: NextConfig = {
         destination: "/portfolio.html",
       },
       {
+        source: "/resume",
+        destination: "/resume/index.html",
+      },
+      {
+        source: "/resume/",
+        destination: "/resume/index.html",
+      },
+      {
         source: "/profile",
         destination: "/profile/index.html",
       },

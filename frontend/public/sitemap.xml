@@ -12,8 +12,16 @@
   <!-- Profile & Experience Page -->
   <url>
     <loc>https://www.sanskaragrawal.tech/profile/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- AI Engineer Resume & Candidate Profile 2026 -->
+  <url>
+    <loc>https://www.sanskaragrawal.tech/resume/</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
